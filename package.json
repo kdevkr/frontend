@@ -4,23 +4,39 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "build:pwa": "quasar build -m pwa",
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\""
   },
   "dependencies": {
     "@quasar/extras": "^1.17.0",
     "dayjs": "^1.11.13",
+    "pinia": "^3.0.3",
     "quasar": "^2.18.2",
-    "vue": "^3.5.17"
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@quasar/vite-plugin": "^1.10.0",
+    "@eslint/js": "^9.34.0",
+    "@quasar/app-vite": "^2.3.0",
     "@tailwindcss/postcss": "^4.1.11",
     "@vitejs/plugin-vue": "^6.0.0",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.6.0",
     "autoprefixer": "^10.4.21",
-    "sass-embedded": "^1.80.2",
+    "eslint": "^9.34.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4.1.11",
-    "vite": "^7.0.4"
+    "typescript": "^5.9.2",
+    "vite": "^7.0.4",
+    "vite-plugin-checker": "^0.10.2",
+    "vue-tsc": "^3.0.6"
+  },
+  "resolutions": {
+    "sass-embedded": "npm:sass@1.80.2"
   }
 }

@@ -1,4 +1,4 @@
-import { boot } from 'quasar/wrappers';
+import { defineBoot } from '#q-app/wrappers';
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -7,7 +7,7 @@ import customParseFormat from "dayjs/plugin/customParseFormat";
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/ko'
 
-export default boot(({ app }) => {
+export default defineBoot(({ app }) => {
     dayjs.extend(utc)
     dayjs.extend(timezone)
     dayjs.extend(customParseFormat);
